@@ -39,7 +39,7 @@ init-dev:
 .PHONY: init-config-i-homework
 # Init configs for homework
 init-config-i-homework:
-	@cp docker-compose.override.homework.yml docker-compose.override.yml
+	@cp docker-compose.override.hw.yml docker-compose.override.yml
 
 .PHONY: homework-i-run
 # Run homework.
