@@ -12,5 +12,4 @@ urlpatterns = [
             ]
         ),
     ),
-    # path("<int:count>", "users/", views.UsersView.as_view(), name="users_generation"),
 ]
