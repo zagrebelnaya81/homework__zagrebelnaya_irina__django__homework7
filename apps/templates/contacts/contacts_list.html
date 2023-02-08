@@ -1,0 +1,33 @@
+{% extends '_helpers/_base.html' %}
+
+{% block content %}
+    <a href="{% url 'contacts:create' %}">
+        <button>
+            Create
+        </button>
+    </a>
+
+    <ul>
+        {% for contacts in object_list %}
+            <li>
+                <span>{{ contacts.name }}</span>
+                <span> - </span>
+                <span>{{ contacts.phone }}</span>
+                <span> - </span>
+                <span>{{ contacts.modified_at }}</span>
+
+                <a href="{% url 'contacts:update' pk=contacts.id %}">
+                    <button>
+                        Edit
+                    </button>
+                </a>
+
+                <a href="{% url 'contacts:delete' pk=contacts.id %}">
+                    <button>
+                        Delete
+                    </button>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
